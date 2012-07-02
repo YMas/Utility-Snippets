@@ -96,20 +96,20 @@ class Parser
 		}
     }
 
-	public function getFileName()
-	{
-		return $this->_fileName;
-	}
+    public function getFileName()
+    {
+        return $this->_fileName;
+    }
 
-	public function __get($name)
-	{
-		$var = '_' . $name;
-		return $this->$var;
-	}
+    public function __get($name)
+    {
+        $var = '_' . $name;
+        return $this->$var;
+    }
 
 	public function extractData()
 	{
-		$file = $this->getFileName();
+	    $file = $this->getFileName();
 		$fh = fopen($file, 'rb');
 
 		$this->_signature = fread($fh, 3);
