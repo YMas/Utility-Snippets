@@ -226,7 +226,6 @@ class Parser
         $this->_frameRate = implode('.', $fps);
 
         //	Number of frames
-        $frames = 0;
         $t = unpack('vcount', (substr($buffer, 0, 2)));
         $this->_frameCount = $t['count'];
         $buffer = substr($buffer, 2);
